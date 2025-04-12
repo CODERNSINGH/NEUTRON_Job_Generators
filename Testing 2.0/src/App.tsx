@@ -10,6 +10,7 @@ import Posts from "./pages/Posts";
 import Analytics from "./pages/Analytics";
 import Platforms from "./pages/Platforms";
 import NotFound from "./pages/NotFound";
+import Suab from "./pages/SUAB"
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/home" element={<Index />} />
+          <Route path="/signupbussiness" element={<Suab />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/analytics" element={<Analytics />} />
