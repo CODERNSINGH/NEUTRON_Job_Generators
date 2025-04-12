@@ -1,64 +1,96 @@
-// App.js
-import React, { useState, useEffect } from 'react';
+// App.jsx
+import React, { useState } from 'react';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+const API_KEY = "AIzaSyCCGYyt-8pSsDSNKQ5cKgXoyprvzVRZ4f4";
+const GEMINI_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+
+const fetchGeminiResponse = async (prompt) => {
+  try {
+    const response = await axios.post(
+      GEMINI_ENDPOINT,
+      {
+        contents: [
+          {
+            parts: [{ text: prompt }],
+          },
+        ],
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+
+    return response.data.candidates[0]?.content?.parts[0]?.text || 'No response found.';
+  } catch (error) {
+    console.error('Error fetching Gemini response:', error);
+    return 'Failed to fetch response from Gemini API.';
+  }
+};
 
 function App() {
-  const [followers, setFollowers] = useState(0);
-  const [caption, setCaption] = useState('');
-  const [imageUrl, setImageUrl] = useState('');
-  const [scheduleTime, setScheduleTime] = useState('');
-  const [analytics, setAnalytics] = useState({});
+  const [input, setInput] = useState('');
+  const [response, setResponse] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    axios.get('http://localhost:5000/api/followers').then(res => {
-      setFollowers(res.data.followers);
-    });
-  }, []);
-
-  const uploadPost = () => {
-    axios.post('http://localhost:5000/api/post', { caption, imageUrl });
-  };
-
-  const schedulePost = () => {
-    axios.post('http://localhost:5000/api/schedule', { caption, imageUrl, scheduleTime });
-  };
-
-  const fetchAnalytics = () => {
-    axios.get('http://localhost:5000/api/analytics').then(res => {
-      setAnalytics(res.data);
-    });
+  const handleSubmit = async () => {
+    setLoading(true);
+    const reply = await fetchGeminiResponse(input);
+    setResponse(reply);
+    setLoading(false);
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h2>Instagram Manager</h2>
-      <p>Followers: {followers}</p>
+    <div className="min-h-screen bg-gray-100 p-6">
+      <div className="max-w-2xl mx-auto bg-white p-6 rounded-2xl shadow-lg">
+        <h1 className="text-2xl font-bold mb-4">Gemini AI Chat</h1>
 
-      <input
-        type="text"
-        placeholder="Caption"
-        value={caption}
-        onChange={(e) => setCaption(e.target.value)}
-      /><br />
-      <input
-        type="text"
-        placeholder="Image URL"
-        value={imageUrl}
-        onChange={(e) => setImageUrl(e.target.value)}
-      /><br />
-      <button onClick={uploadPost}>Upload Post</button><br /><br />
+        <textarea
+          className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          rows={5}
+          placeholder="Ask Gemini something..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
 
-      <input
-        type="datetime-local"
-        onChange={(e) => setScheduleTime(e.target.value)}
-      /><br />
-      <button onClick={schedulePost}>Schedule Post</button><br /><br />
+        <button
+          className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          onClick={handleSubmit}
+          disabled={loading}
+        >
+          {loading ? 'Loading...' : 'Ask Gemini'}
+        </button>
 
-      <button onClick={fetchAnalytics}>Fetch Analytics</button>
-      <div>
-        <p>Likes: {analytics.likes}</p>
-        <p>Reach: {analytics.reach}</p>
-        <p>Comments: {analytics.comments}</p>
+        {response && (
+          <div className="mt-6 prose max-w-full">
+            <ReactMarkdown
+              children={response}
+              components={{
+                code({ node, inline, className, children, ...props }) {
+                  const match = /language-(\w+)/.exec(className || '')
+                  return !inline && match ? (
+                    <SyntaxHighlighter
+                      style={oneDark}
+                      language={match[1]}
+                      PreTag="div"
+                      children={String(children).replace(/\n$/, '')}
+                      {...props}
+                    />
+                  ) : (
+                    <code className={className} {...props}>
+                      {children}
+                    </code>
+                  );
+                },
+              }}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

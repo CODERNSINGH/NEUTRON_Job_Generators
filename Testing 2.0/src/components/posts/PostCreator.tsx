@@ -373,10 +373,10 @@ const PostCreator = () => {
   const generateAiText = async () => {
     setIsGeneratingText(true);
     try {
-      // Gemini API implementation with API key as query parameter
+      // Gemini API implementation using the gemini-2.0-flash model
       const apiKey = "AIzaSyBkgVFMxmF6UfDzzzlEs6jVyY1j8HGnyjA";
       
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`, {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json'
@@ -386,13 +386,7 @@ const PostCreator = () => {
             parts: [{
               text: aiTextPrompt
             }]
-          }],
-          generationConfig: {
-            temperature: 0.7,
-            topK: 40,
-            topP: 0.95,
-            maxOutputTokens: 1000,
-          }
+          }]
         })
       });
       
@@ -408,7 +402,7 @@ const PostCreator = () => {
           .join('\n');
         
         // You can optionally keep the format showing it was AI-generated
-        generatedText = `✨ AI-generated (Gemini):\n\n${generatedText}`;
+        generatedText = `\n\n${generatedText}`;
       } else if (data.error) {
         throw new Error(data.error.message || 'Error generating text with Gemini');
       } else {
