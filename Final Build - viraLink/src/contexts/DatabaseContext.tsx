@@ -198,7 +198,7 @@ export function DatabaseProvider({ children }: { children: ReactNode }) {
           rating: 4.9,
           hourlyRate: 65,
           completedJobs: 187,
-          avatar: 'https://media-hosting.imagekit.io/ed552fb446004c3e/ChatGPT%20Image%20Apr%203,%202025,%2009_21_03%20PM.png?Expires=1839126879&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TeyQl1uVE6f~xvOG0Bnvv0hrIgzR7ceyPG5tO2MRu6~0EONORRUU4hycFVDFB56VJE9qJguFyOBkhUFlaU0F7stPupLLjMgPYGwBfxZKxzE-4s25g7~q94pduf3m3rJGSszdtjErTYHF4b2359sBHutY~eHsq7J~GYoaRp2TR7FQUPF6ftIP2ZhkpKCN3aO2hQZSlmBJc1czbv5oLonjnltJGyrFNdwaehor~g4l1K50W-wU6KYZp1Yy4~DwDd1m9fK1ISGnfHpw4a6b8P0Q1ny~MYucrV~vOCMzDCWlbFiKcrakBgzwLv7n5ftq2mkwtwOJ0FMkhBD-6BgI5rLrdw__',
+          avatar: 'https://media-hosting.imagekit.io/d1d006addf204dc1/IMG_4123.JPG?Expires=1839129512&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Qd4B2Q2~az6rePZxotwMM7L6F2bJWgNXP0RfwCy06Bu1SXWz9wkr6kD~zpTIMO9FKjsdqJN5dxSZQVGmXGaCtBfFnf2ka~pSJacvMDDzAOy3qTApOo9~xCpOlx3VYelBlqAeHA91l68VTOrjbNosoXD8sXZlMobFiHZ~FjdHhH1vGFPVQMKy0MqVIzOXKrMbco3q5gw1HlbZMqcUfGbKhjG0eiaWdk~mdxBg-QReMubYkghdgS6YQAhLBrCL9tSV7oLx-nHvA4j8T3DSlWMKuNgeO39-rnXJmYzoB4-G3MS7jvUYmBNnFtePO4Nt0AznhUr-6Pmv~AHRNNmUD3mSSQ__',
           available: true
         },
         {
@@ -209,7 +209,7 @@ export function DatabaseProvider({ children }: { children: ReactNode }) {
           rating: 4.8,
           hourlyRate: 75,
           completedJobs: 124,
-          avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=michael',
+          avatar: 'https://media-hosting.imagekit.io/a535ea20cc9a46a8/PRANAV-removebg-preview.png?Expires=1839129512&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=kabF5GpL-RWQ~MiG9U9KQoMJNLwJ5sKUvOumnxSiv5-iPiYwLB0cjUJIJqXvIhMMwqhXUJVOt~oI2Orv~SU~XTaATl0L75wiPgdZYVwU4GLUnktaQqAIOqP~cpoB1gzCmjeLZamSSWeBYMBdA8alu-AZuAasC6~35BFF-gw9vDppyYQFbKtDzBttWgHAJL0A6IylD~ovDWk49MqSMLIoPKcYdgLZU~Tvhczr82dCKrXNug1dNXBdUyDGzc4mvt8mE2bHT9ggvAcA-i7vSRWYQVWI1VIEcXbeC4b2IGdkToPgirrVein8UJLy2p2WZmt1VIF4Qb9hvmo2fcS5CkOihA__',
           available: true
         },
         {
@@ -220,7 +220,7 @@ export function DatabaseProvider({ children }: { children: ReactNode }) {
           rating: 4.7,
           hourlyRate: 60,
           completedJobs: 93,
-          avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=emma',
+          avatar: 'https://media-hosting.imagekit.io/7bc970fd2e794936/Adobe%20Express%20-%20file%20(2).png?Expires=1839129512&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=myfXmPtOW8MeODZFDY1Ga1eXLeFoPDPEvgOkCLsMMIIa3Y04ZKvlcDDxR0L9YeDvH~iPhYNTaLKmNZNd-gBvMqEFziOhJIGNbS5S~NAndY~r6HgdXkJl9mwJF8L2QRKtmXZl~9SLwADrEkJbtq9odLIICcIuVbQc55RPn6Ob7TClBnxEJkuZz2b7UUBqbauftZKFz-TDjy5fhQqMxfeM4p~WEFG7HJZ9p9BKjfHxKdP5nH3bSvReJ2yrNRociwAMVhyuk89d4NHf~r6sPbjALgKGFYX1HikH8VgHlZSjkXjNRhpbmlEK-6Wx~rL0G2EIkNlKpli-3cFmnp9Y7BUq5A__',
           available: false
         },
         {
@@ -231,7 +231,7 @@ export function DatabaseProvider({ children }: { children: ReactNode }) {
           rating: 4.9,
           hourlyRate: 85,
           completedJobs: 156,
-          avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=david',
+          avatar: 'https://media-hosting.imagekit.io/a7c080b2748b4505/IMG_4121.JPG?Expires=1839129512&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=NKAlwVifb2OwWVFKT8JidrsdnUUyI-t1zOufQr58YAW9RW0TI~9WhyS8bt-xKRoP1-PkwZ6HCpbhxoQOhYpeBL6OEDDTW5XykFMylZ010njZ3l9SOXgmjMx7CIQ5VWIw64XFwIH2jCUWNnrKSMQU~zyL9ILJL8ApaZTwWqQFd5q4WjTiLfyMLNYztTbZ-5mKvd7PszP2N7C9aTcIO6sPIHx6bm6jEw7CN3IIvOlQ86BSn7oAcefjgHslyYsYCvSbvy3gP1WWARgOAuhofp5rTc81ha4~bw6HsmPKw2-FwyX99oH7lHRzuv0xkO3Afc1rwDqk8XrKb8fwbWOXm8muUQ__',
           available: true
         },
         {
@@ -242,7 +242,7 @@ export function DatabaseProvider({ children }: { children: ReactNode }) {
           rating: 4.8,
           hourlyRate: 70,
           completedJobs: 142,
-          avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=ram',
+          avatar: 'https://media-hosting.imagekit.io/ed552fb446004c3e/ChatGPT%20Image%20Apr%203,%202025,%2009_21_03%20PM.png?Expires=1839126879&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TeyQl1uVE6f~xvOG0Bnvv0hrIgzR7ceyPG5tO2MRu6~0EONORRUU4hycFVDFB56VJE9qJguFyOBkhUFlaU0F7stPupLLjMgPYGwBfxZKxzE-4s25g7~q94pduf3m3rJGSszdtjErTYHF4b2359sBHutY~eHsq7J~GYoaRp2TR7FQUPF6ftIP2ZhkpKCN3aO2hQZSlmBJc1czbv5oLonjnltJGyrFNdwaehor~g4l1K50W-wU6KYZp1Yy4~DwDd1m9fK1ISGnfHpw4a6b8P0Q1ny~MYucrV~vOCMzDCWlbFiKcrakBgzwLv7n5ftq2mkwtwOJ0FMkhBD-6BgI5rLrdw__',
           available: true
         }
       ];
