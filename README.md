@@ -21,12 +21,11 @@ viraLink is a comprehensive social media management platform that helps individu
 - **Tailwind CSS**: Utility-first CSS framework for styling
 - **React Router Dom**: Navigation and routing
 - **Lucide React**: Beautiful, consistent icon set
-- **shadcn/ui**: High-quality UI components
 - **React Markdown**: Renders AI-generated content beautifully
 - **Sonner**: Modern, minimalist toast notifications
 - **Recharts**: Powerful, composable charting library
 - **Google Gemini**: Fine-tuned AI model for content generation
-- **Tanstack React Query**: Data fetching and state management
+
 
 ## Application Flow
 
