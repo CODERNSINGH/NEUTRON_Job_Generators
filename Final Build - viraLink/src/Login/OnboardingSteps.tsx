@@ -52,8 +52,8 @@ const OnboardingSteps = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center p-6">
       {/* Progress bar */}
-      <div className="w-full max-w-3xl mb-12">
-        <div className="flex justify-between items-center">
+      <div className=" flex w-full justify-center max-w-3xl mb-12">
+        <div className="flex items-center">
           {[1, 2, 3, 4, 5].map((step) => (
             <div key={step} className="flex items-center">
               <div className={`h-4 w-4 rounded-full ${step <= currentStep ? 'bg-blue-500' : 'bg-gray-300'}`}></div>

@@ -96,7 +96,7 @@ const Sidebar = () => {
       
       <div className="flex-1 overflow-y-auto px-2">
         <SidebarSection title="Main" expanded={expanded}>
-          <SidebarLink to="/" icon={Home} label="Dashboard" expanded={expanded} />
+          <SidebarLink to="/dashboard" icon={Home} label="Dashboard" expanded={expanded} />
           <SidebarLink to="/calendar" icon={Calendar} label="Calendar" expanded={expanded} />
           <SidebarLink to="/posts" icon={MessageSquare} label="Posts" expanded={expanded} />
           <SidebarLink to="/analytics" icon={BarChart2} label="Analytics" expanded={expanded} />
