@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Shopowner from '../components/images/shopowner.png';
 import { Link } from 'react-router-dom';
+import {ChartNoAxesCombined} from 'lucide-react'
 
 const BusinessSignup = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +25,12 @@ const BusinessSignup = () => {
     <div className="min-h-screen bg-white flex flex-col">
       {/* Header */}
       <header className="p-6">
-        <h1 className="text-3xl font-bold">GenSpark</h1>
+        <Link to="/" className="flex items-center gap-2">
+                    <div className="bg-primary text-primary-foreground rounded p-1">
+                    <ChartNoAxesCombined />
+                    </div>
+                    <span className="text-xl font-bold">viraLink</span>
+                  </Link>
       </header>
 
       {/* Main content */}
@@ -35,7 +40,7 @@ const BusinessSignup = () => {
           <div className="relative mb-8">
             <div className="h-64 relative">
               <img 
-                src={Shopowner} 
+                src="src/Login/image.png" 
                 alt="Business person using tablet" 
                 className="rounded-lg w-full h-full object-cover"
               />
@@ -101,19 +106,19 @@ const BusinessSignup = () => {
                     required
                   />
                 </div>
-                
-                <button
-                  type="submit"
-                  className="w-full bg-blue-500 text-white rounded-md p-4 font-semibold hover:bg-blue-600 transition"
+                <div >
+                <Link
+                  to="/ques"
+                  className="w-full bg-blue-500 text-white rounded-md p-4 font-semibold hover:bg-blue-600 transition text-center"
                 >
                   Sign up
-                </button>
+                </Link></div>
               </div>
             </form>
             
             <div className="mt-6 text-center">
               <Link to="/login" className="text-sm text-gray-700 hover:underline">
-                Already a member? Login
+                already a member? login
               </Link>
             </div>
           </div>
