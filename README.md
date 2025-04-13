@@ -1,7 +1,6 @@
 
 # viraLink - All-In-One Social Media Management Platform
 
-![viraLink](https://api.dicebear.com/7.x/identicon/svg?seed=viralink&backgroundColor=0891b2&radius=50)
 
 ## Overview
 
